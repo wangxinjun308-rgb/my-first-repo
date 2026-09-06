@@ -1,0 +1,19 @@
+name: 检查README是否存在
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  check-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 检查 README.md
+        run: |
+          if [ -f "README.md" ]; then
+            echo "✅ README.md 存在"
+          else
+            echo "❌ 找不到 README.md"
+            exit 1
+          fi

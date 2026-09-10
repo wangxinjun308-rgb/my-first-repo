@@ -1,0 +1,15 @@
+镜像：
+查看镜像docker images
+搜索镜像docker search nginx
+拉取镜像docker pull nginx
+删除镜像docker rmi hello-world
+
+容器：
+查看正在进行的容器ID docker ps
+查看所有容器 docker ps -a
+进入容器内部
+进行一个交互式容器docker run -it ubtuntu bash
+停止容器docker stop <容器ID或名称>
+删除容器docker rm <容器ID或名称>
+
+

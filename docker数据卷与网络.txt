@@ -1,0 +1,13 @@
+数据卷（Volume）——把数据存到容器外面的硬盘上，容器删了数据还在
+常用数据卷命令
+docker volume create 卷名	创建数据卷
+docker volume ls	查看所有数据卷
+docker volume inspect 卷名	查看卷的详细信息
+docker volume rm 卷名	删除数据卷
+docker volume prune	删除所有未使用的数据卷
+
+三种网络模式
+模式	命令	特点
+Bridge（默认）	docker run -p 8080:80 nginx	容器有独立 IP，通过端口映射对外访问
+Host	docker run --network host nginx	容器和主机共享网络，性能最好
+None	docker run --network none ubuntu	容器无网络，完全隔离
